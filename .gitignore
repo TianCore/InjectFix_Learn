@@ -1,0 +1,46 @@
+# Unity generated folders
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Uu]ser[Ss]ettings/
+[Mm]emoryCaptures/
+[Rr]ecordings/
+
+# Addressables generated data
+Assets/AddressableAssetsData/*/*.bin*
+
+# IDE and solution files
+.idea/
+.vs/
+.vscode/
+*.csproj
+*.unityproj
+*.sln
+*.sln.dotsettings
+*.sln.iml
+
+# User / cache / debug files
+*.tmp
+*.bak
+*.user
+*.userprefs
+*.pidb
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+*.stacktrace
+sysinfo.txt
+
+# OS generated files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Optional: keep Unity lock file tracked by default
+# Packages/packages-lock.json
