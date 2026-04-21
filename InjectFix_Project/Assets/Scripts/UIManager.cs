@@ -10,7 +10,7 @@ public class UIManager : ScriptableObject
     {
         if (_uiPrefabs == null || _uiPrefabs.Length == 0)
         {
-            Debug.LogError("Ã»ÓÐÕÒµ½ÈÎºÎUI£¬¼ÓÔØÊ§°Ü");
+            Debug.LogError("æ²¡æœ‰æ‰¾åˆ°ä»»ä½•UIï¼ŒåŠ è½½å¤±è´¥");
             return;
         }
 
