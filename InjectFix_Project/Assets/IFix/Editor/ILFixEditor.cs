@@ -861,8 +861,9 @@ namespace IFix.Editor
                 foreach (var assembly in injectAssemblys)
                 {
                     var assembly_path = string.Format("./Library/{0}/{1}.dll", GetScriptAssembliesFolder(), assembly);
-                    GenPatch(assembly, assembly_path, "./Assets/Plugins/IFix.Core.dll",
-                        string.Format("{0}.patch.bytes", assembly));
+                    var patchPath = string.Format("{0}.patch.bytes", assembly);
+                    GenPatch(assembly, assembly_path, "./Assets/Plugins/IFix.Core.dll", patchPath);
+                    UnityEngine.Debug.Log("IFix patch output: " + Path.GetFullPath(patchPath));
                 }
             }
             catch (Exception e)

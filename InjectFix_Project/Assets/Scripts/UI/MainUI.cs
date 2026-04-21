@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using IFix;
+using UnityEngine;
 using UnityEngine.UI;
 
 public class MainUI : MonoBehaviour
@@ -6,6 +7,7 @@ public class MainUI : MonoBehaviour
     [SerializeField]
     private Text _title;
 
+    [Patch]
     public void OnClickStart()
     {
         SetTitle("游戏开始", "#3EC3CAFF");

@@ -4,7 +4,8 @@ public class GameMain : MonoBehaviour
 {
     private void Awake()
     {
-        Debug.Log("¿ªÊ¼ÓÎÏ·");
+        HotfixPatchLoader.TryLoadFromStreamingAssets();
+        Debug.Log("åŠ è½½è¡¥ä¸");
         GameManager.Instance.LoadMainUI();
     }
 }
