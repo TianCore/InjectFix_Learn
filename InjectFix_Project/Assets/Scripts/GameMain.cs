@@ -5,7 +5,7 @@ public class GameMain : MonoBehaviour
     private void Awake()
     {
         HotfixPatchLoader.TryLoadFromStreamingAssets();
-        Debug.Log("加载补丁");
+        Debug.Log("ĺ č˝˝čĄĽä¸");
         GameManager.Instance.LoadMainUI();
     }
 }

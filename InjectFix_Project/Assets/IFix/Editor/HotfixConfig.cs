@@ -12,7 +12,12 @@ public class HotfixConfig
         {
             return new List<Type>
             {
-                typeof(MainUI)
+                // UI 入口：玩家最直接可见的交互
+                typeof(MainUI),
+                typeof(UIManager),
+                // 业务入口：启动流程与 UI 加载编排
+                typeof(GameMain),
+                typeof(GameManager),
             };
         }
     }

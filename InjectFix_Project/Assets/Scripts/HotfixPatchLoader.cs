@@ -8,7 +8,10 @@ public static class HotfixPatchLoader
 
     public static bool TryLoadFromStreamingAssets(string patchFileName = DefaultPatchFileName)
     {
+        CheckInjectBridge();
+
         string patchPath = Path.Combine(Application.streamingAssetsPath, patchFileName);
+        Debug.Log($"准备加载补丁，patchPath: {patchPath}");
         if (!File.Exists(patchPath))
         {
             Debug.LogWarning($"未找到补丁文件: {patchPath}");
@@ -36,6 +39,7 @@ public static class HotfixPatchLoader
     {
         try
         {
+            Debug.Log($"调用 PatchManager.Load，patchPath: {patchPath}");
             PatchManager.Load(patchPath);
             Debug.Log("使用 IFix.Core.PatchManager.Load(string) 加载补丁");
             return true;
@@ -46,5 +50,17 @@ public static class HotfixPatchLoader
         }
 
         return false;
+    }
+
+    private static void CheckInjectBridge()
+    {
+        var bridgeType = System.Type.GetType("IFix.ILFixInterfaceBridge, Assembly-CSharp");
+        if (bridgeType == null)
+        {
+            Debug.LogError("Inject 自检失败：当前包未注入，找不到 IFix.ILFixInterfaceBridge。");
+            return;
+        }
+
+        Debug.Log("Inject 自检通过：已找到 IFix.ILFixInterfaceBridge。");
     }
 }
