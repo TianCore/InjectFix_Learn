@@ -16,14 +16,14 @@ public class GameManager
     }
 
     // Assets/Resources/UIManager.asset
-    public const string UIManagerPath = "UIManager"; // 不需要后缀，也不需要完整路径
+    public const string UIManagerPath = "UIManager"; // 璧勬簮寮曠敤璺緞
 
     public void LoadMainUI()
     {
         var manager = Resources.Load<UIManager>(UIManagerPath);
         if (manager == null)
         {
-            Debug.LogError("UIManager 加载失败，UI加载失败");
+            Debug.LogError("UIManager 鍔犺浇澶辫触锛孶I鍔犺浇澶辫触");
             return;
         }
 

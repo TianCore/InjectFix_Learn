@@ -6,8 +6,7 @@ public class MainUI : MonoBehaviour
 {
     [SerializeField]
     private Text _title;
-
-    [Patch]
+    
     public void OnClickStart()
     {
         SetTitle("游戏开始", "#3EC3CAFF");
@@ -16,6 +15,12 @@ public class MainUI : MonoBehaviour
     public void OnClickEnd()
     {
         SetTitle("游戏结束", "#DAA520FF");
+    }
+
+    public void OnClickInject()
+    {
+        SetTitle("注入Inject", "#8470FFFF");
+        HotfixPatchLoader.TryLoadFromStreamingAssets();
     }
 
     private void SetTitle(string text, string colorStr)
