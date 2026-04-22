@@ -68,6 +68,9 @@ namespace IFix.Editor
         //system("mono ifix.exe [args]")
         public static void CallIFix(List<string> args)
         {
+
+           UnityEngine.Debug.Log("CallIFix: " + string.Join(" ", args.ToArray()));
+
 #if UNITY_EDITOR_OSX || UNITY_EDITOR_LINUX
             var mono_path = Path.Combine(Path.GetDirectoryName(typeof(UnityEngine.Debug).Module.FullyQualifiedName),
                 "../MonoBleedingEdge/bin/mono");
@@ -345,7 +348,7 @@ namespace IFix.Editor
 
         //默认的注入及备份程序集
         //另外可以直接调用InjectAssembly对其它程序集进行注入。
-        static string[] injectAssemblys = new string[]
+        public static string[] injectAssemblys = new string[]
         {
             "Assembly-CSharp",
             "Assembly-CSharp-firstpass"
