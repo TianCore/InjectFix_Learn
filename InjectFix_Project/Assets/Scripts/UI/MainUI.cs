@@ -7,9 +7,10 @@ public class MainUI : MonoBehaviour
     [SerializeField]
     private Text _title;
     
+    [Patch]
     public void OnClickStart()
     {
-        SetTitle("游戏开始", "#3EC3CAFF");
+        SetTitle("游戏开始补丁1", "#3EC3CAFF");
     }
 
     public void OnClickEnd()

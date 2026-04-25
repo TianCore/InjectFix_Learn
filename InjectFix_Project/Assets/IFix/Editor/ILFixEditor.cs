@@ -338,7 +338,7 @@ namespace IFix.Editor
 
         private static string GetScriptAssembliesFolder()
         {
-            var assembliesFolder = "PlayerScriptAssemblies";
+            var assembliesFolder = "Bee/PlayerScriptAssemblies";
             if (!Directory.Exists(string.Format("./Library/{0}/", assembliesFolder)))
             {
                 assembliesFolder = "ScriptAssemblies";
